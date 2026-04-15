@@ -298,7 +298,7 @@ body {
     display: flex; align-items: center; padding: 1.5rem; text-decoration: none; color: var(--text-pure); font-weight: 600; font-family: 'Inter', sans-serif;
 }
 .cert-icon { color: var(--neon-blue); margin-right: 1.25rem; flex-shrink: 0; }
-.cert-arrow { margin-left: auto; color: var(--text-dim); transition: color 0.3s, transform 0.3s; }
+.cert-arrow { margin-left: 1rem; color: var(--neon-purple); font-weight: 800; font-size: 1.5rem; transition: color 0.3s, transform 0.3s; }
 .cert-card:hover .cert-arrow { color: var(--neon-blue); transform: translate(4px, -4px); }
 
 /* Custom Scrollbar */
@@ -317,6 +317,10 @@ body {
 }
 @media (max-width: 768px) {
     .nav-links { display: none; }
-    .hero-title { font-size: 3.5rem; }
+    .hero-title { font-size: 3rem; letter-spacing: -1px; }
+    .hero-section { padding-top: 10rem; padding-bottom: 3rem; }
+    .section { padding: 3.5rem 0; }
     .nav-cta { padding: 0.4rem 0.8rem; font-size: 0.75rem; }
+    .cert-card { display: flex; justify-content: flex-start; align-items: center; }
+    .cert-arrow { margin-left: auto; }
 }
