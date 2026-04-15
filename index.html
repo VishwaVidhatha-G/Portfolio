@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishwa Vidhatha | Data Analyst</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP for bombastic scroll animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Three.js for interactive particle background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body data-theme="dark">
+    
+    <!-- Three.js Canvas Container -->
+    <div id="particle-canvas" class="particle-bg"></div>
+    <div class="vignette-overlay"></div>
+
+    <!-- Floating Pill Navigation -->
+    <nav class="nav-pill gsap-nav">
+        <div class="nav-brand">VVG.</div>
+        <div class="nav-links">
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#skills" class="nav-link">Technical Skills</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#certifications" class="nav-link">Certifications</a>
+        </div>
+        
+        <div style="display:flex; align-items:center; gap:1rem;">
+            <!-- Dark / Light Toggle Restored -->
+            <button id="theme-toggle" aria-label="Toggle Theme" class="theme-btn">
+                <svg id="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg id="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+            <a href="mailto:vishwa.vidhatha10@gmail.com" class="nav-cta" target="_blank" rel="noopener noreferrer">Contact</a>
+        </div>
+    </nav>
+
+    <main class="page-container">
+        
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="badge-wrapper gsap-up"><span class="neon-badge">DATA ANALYST</span></div>
+                
+                <h1 class="hero-title gsap-title">
+                    Vishwa Vidhatha<br>
+                    <span class="gradient-text">Gujjula</span>
+                </h1>
+                
+                <!-- Rewritten for Recruiting Impact & Centered -->
+                <p class="hero-subtitle gsap-fade">
+                    Results-driven Data Analyst specializing in architecting scalable infrastructure, transforming multi-day reporting bottlenecks into instant dashboards, and deploying production-ready ML pipelines to drive measurable enterprise growth.
+                </p>
+                
+                <div class="hero-icons gsap-fade">
+                    <a href="mailto:vishwa.vidhatha10@gmail.com" class="icon-link" aria-label="Email" target="_blank" rel="noopener noreferrer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vishwa-vidhatha-g/" target="_blank" class="icon-link" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="https://github.com/VishwaVidhatha-G" target="_blank" class="icon-link" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="metrics-grid gsap-stagger">
+                <div class="metric-glass">
+                    <h2 class="metric-number">1M<span style="color:var(--neon-blue)">+</span></h2>
+                    <p>Records Transformed</p>
+                </div>
+                <div class="metric-glass">
+                    <h2 class="metric-number">75<span style="color:var(--neon-blue)">%</span></h2>
+                    <p>Manual Overhead Cut</p>
+                </div>
+                <div class="metric-glass">
+                    <h2 class="metric-number">2→0</h2>
+                    <p>Days to Report</p>
+                </div>
+                <div class="metric-glass">
+                    <h2 class="metric-number">10<span style="color:var(--neon-blue)">%</span></h2>
+                    <p>Forecast Yield Gain</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="section-header gsap-fade">
+                <h2 class="section-title">Experience</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="core-timeline">
+                <!-- Turing -->
+                <div class="timeline-block gsap-slide-up">
+                    <div class="timeline-dot"></div>
+                    <div class="experience-card glow-card">
+                        <div class="card-top">
+                            <div>
+                                <h3 class="role">Business Analyst</h3>
+                                <span class="company">Turing</span>
+                            </div>
+                            <div class="date-tag">Mar 2026 – Present</div>
+                        </div>
+                        <ul class="impact-list">
+                            <li>Standardized complex failure classification across extensive datasets, significantly accelerating labeling consistency on <strong>100+</strong> active LLM logic streams.</li>
+                            <li>Engineered highly rigorous QA testing rubrics for unstructured conversational data, elevating logical adherence and pushing output failure rate to near <strong>0%</strong>.</li>
+                            <li>Stress-tested core LLM context-window boundaries, effectively minimizing out-of-bounds hallucinations and drastically improving the predictability of multi-turn interactions.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- RealPage -->
+                <div class="timeline-block gsap-slide-up">
+                    <div class="timeline-dot"></div>
+                    <div class="experience-card glow-card">
+                        <div class="card-top">
+                            <div>
+                                <h3 class="role">Data Analyst Intern</h3>
+                                <span class="company">RealPage</span>
+                            </div>
+                            <div class="date-tag">Jun 2024 – Jun 2025</div>
+                        </div>
+                        <ul class="impact-list">
+                            <li>Architected <strong>6</strong> multi-layered Power BI dashboards, successfully slashing finance KPI turnaround from a <strong>48-hour</strong> lag to instant <strong>same-day</strong> reporting.</li>
+                            <li>Engineered Power Automate event triggers, effectively reducing human-in-the-loop manual errors by <strong>75%</strong> and removing <strong>15</strong> weekly hours of systematic overhead.</li>
+                            <li>Deployed an ARIMA time-series model utilizing historical fiscal data, driving short-term predictive forecast viability from <strong>70%</strong> to a steady <strong>80%</strong>.</li>
+                            <li>Structured over <strong>1M+</strong> unorganized rows via rigorous Power Query logic, establishing a highly reliable pipeline for enterprise analytics routing.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Renamed from Case Studies) -->
+        <section id="projects" class="section">
+            <div class="section-header gsap-fade">
+                <h2 class="section-title">Projects</h2>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="grid-layout">
+                <!-- Movie Dashboard -->
+                <div class="project-card glow-card gsap-slide-up">
+                    <div class="project-console">
+                        <!-- Loaded GIF per user request & fallback styling behind it -->
+                        <div class="console-media-wrapper">
+                            <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/96835850/399170157-c2c69130-1856-4fb3-998d-db16d33f9e97.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260415%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260415T121359Z&X-Amz-Expires=300&X-Amz-Signature=e572ca8f53dbf6760b3d5442f7581a238669d53968a6a26361dd770f9086b5f0&X-Amz-SignedHeaders=host&response-content-type=image%2Fgif" 
+                                alt="Dashboard Simulation GIF" 
+                                class="console-gif"
+                                onerror="this.onerror=null; this.style.display='none';"
+                            />
+                            
+                            <div class="console-header overlay-element">
+                                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                            </div>
+                            <!-- Removed text overlay to prevent overlap with your GIF -->
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <h3 class="project-name">Movie Revenue Dashboard</h3>
+                        <ul class="impact-list">
+                            <li>Processed <strong>647K+</strong> records mapping <strong>$709B</strong> in theatrical revenue to statistically link macro genre trends to fiscal success.</li>
+                            <li>Constructed interactive Power BI telemetry, simulating live KPI business parameters for high-level content strategy.</li>
+                        </ul>
+                        <div class="tech-rack">
+                            <span class="tech-pill">SQL</span>
+                            <span class="tech-pill">Power BI</span>
+                        </div>
+                        
+                        <div class="action-links">
+                            <a href="https://github.com/VishwaVidhatha-G/Movie-Data-Dashboard" target="_blank" class="outline-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg> Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Music Genre CNN -->
+                <div class="project-card glow-card gsap-slide-up">
+                    <div class="project-console">
+                        <div class="console-media-wrapper">
+                            <div class="console-header overlay-element">
+                                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                            </div>
+                            <div class="console-body overlay-element">
+                                <p class="console-text text-purple">&gt; Initializing TensorFlow Weights...</p>
+                                <p class="console-text text-purple">&gt; Verifying 50k+ Audio Embeddings [SUCCESS]</p>
+                                
+                                <a href="https://huggingface.co/spaces/VishwaVidhatha/Music-Genre-Prediction" target="_blank" class="outline-btn" style="background:var(--neon-purple); color:#fff; border-color:var(--neon-purple); margin-top: 1.5rem; align-self: flex-start; max-width: max-content;">Launch Demo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <h3 class="project-name">Music Genre CNN Classification</h3>
+                        <ul class="impact-list">
+                            <li>Designed a Convolutional Neural Net digesting <strong>50K+</strong> audio samples, successfully reaching <strong>87.6%</strong> diagnostic accuracy.</li>
+                            <li>Containerized the inference model via Docker and published onto Hugging Face, completely eliminating pre-existing manual tagging blockers.</li>
+                        </ul>
+                        <div class="tech-rack">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">TensorFlow</span>
+                            <span class="tech-pill">Docker</span>
+                            <span class="tech-pill">HuggingFace</span>
+                        </div>
+                        
+                        <div class="action-links" style="display:flex;">
+                            <a href="https://github.com/VishwaVidhatha-G/Music-Genre-Prediction" target="_blank" class="outline-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg> Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-header gsap-fade">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-bucket glow-card gsap-slide-up">
+                    <h4>Programming & Data</h4>
+                    <div class="tech-rack">
+                        <span class="tech-pill">Python (Pandas, NumPy, Matplotlib)</span>
+                        <span class="tech-pill">SQL (PostgreSQL, MS SQL)</span>
+                    </div>
+                </div>
+                <div class="skill-bucket glow-card gsap-slide-up">
+                    <h4>Data Analysis & BI</h4>
+                    <div class="tech-rack">
+                        <span class="tech-pill">Power BI</span>
+                        <span class="tech-pill">Tableau</span>
+                        <span class="tech-pill">Excel (Advanced, Macros)</span>
+                        <span class="tech-pill">KPI Reporting</span>
+                        <span class="tech-pill">Dashboard Development</span>
+                    </div>
+                </div>
+                <div class="skill-bucket glow-card gsap-slide-up">
+                    <h4>Data Processing</h4>
+                    <div class="tech-rack">
+                        <span class="tech-pill">Data Cleaning</span>
+                        <span class="tech-pill">Transformation (Power Query, SQL)</span>
+                    </div>
+                </div>
+                <div class="skill-bucket glow-card gsap-slide-up">
+                    <h4>Machine Learning (Basic)</h4>
+                    <div class="tech-rack">
+                        <span class="tech-pill">Time Series (ARIMA)</span>
+                        <span class="tech-pill">Neural Networks (MLP)</span>
+                    </div>
+                </div>
+                <div class="skill-bucket glow-card gsap-slide-up" style="grid-column: 1 / -1; max-width:700px; margin: 0 auto;">
+                    <h4 style="text-align:center;">Tools</h4>
+                    <div class="tech-rack" style="justify-content:center;">
+                        <span class="tech-pill">Git</span>
+                        <span class="tech-pill">Jupyter Notebook</span>
+                        <span class="tech-pill">Docker (Basic)</span>
+                        <span class="tech-pill">Power Automate</span>
+                        <span class="tech-pill">Power Apps</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="section">
+            <div class="section-header gsap-fade">
+                <h2 class="section-title">Education</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="education-block glow-card gsap-slide-up">
+                <div class="edu-content">
+                    <h3 class="edu-degree">B.Tech CSE (AIML)</h3>
+                    <div class="edu-org">Guru Nanak Institute of Technology</div>
+                    <div class="edu-date">2021 – 2024</div>
+                </div>
+                <div class="edu-score">
+                    <span class="score-label">CGPA</span>
+                    <span class="score-value">8.16</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section id="certifications" class="section" style="padding-bottom: 8rem;">
+            <div class="section-header gsap-fade">
+                <h2 class="section-title">Certifications</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="cert-grid">
+                <a href="https://drive.google.com/file/d/1RwkLgkqc5tZHtee1qReyH1epvc0l4sVv/view" class="cert-card glow-card gsap-stagger" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cert-icon"><path d="M12 15l-8-4.5v9L12 24l8-4.5v-9z"></path><path d="M12 15l8-4.5-8-4.5-8 4.5z"></path></svg>
+                    <span>AWS Cloud Practitioner</span>
+                    <span class="cert-arrow">↗</span>
+                </a>
+                
+                <a href="https://drive.google.com/file/d/1YtNwmrlzrqi3M2RbZFLXoiTL9PIIr7Rh/view" class="cert-card glow-card gsap-stagger" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cert-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
+                    <span>Oracle Data Science Pro</span>
+                    <span class="cert-arrow">↗</span>
+                </a>
+
+                <a href="https://drive.google.com/file/d/1-OcOzKgRafoXFbC0SWg-KCvdDK5d1vs_/view" class="cert-card glow-card gsap-stagger" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cert-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    <span>Deloitte Data Analytics</span>
+                    <span class="cert-arrow">↗</span>
+                </a>
+
+                <a href="https://drive.google.com/file/d/1HkMr5BWif4Vv5q3svbxc9pDc5vaeIQiN/view" class="cert-card glow-card gsap-stagger" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cert-icon"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    <span>SQL Intermediate (HackerRank)</span>
+                    <span class="cert-arrow">↗</span>
+                </a>
+
+                <a href="https://drive.google.com/file/d/1ml0mxB15I7-EyyiMiliD9o01DMQEaiOt/view" class="cert-card glow-card gsap-stagger" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cert-icon"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    <span>Tata GenAI Analytics</span>
+                    <span class="cert-arrow">↗</span>
+                </a>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
