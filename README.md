@@ -18,4 +18,4 @@ To run this project locally on your machine:
 2. Navigate into the directory and open `index.html` in your web browser. No local servers or installations are required.
 
 ## Live Preview
-*(Add your live deployed URL here once hosted on GitHub Pages or Vercel)*
+*https://vishwa-vidhatha.vercel.app/*
