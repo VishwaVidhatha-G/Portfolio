@@ -257,6 +257,8 @@ body {
 .text-cyan { color: var(--console-text-cyan); font-weight: 600;}
 .text-purple { color: var(--console-text-purple); font-weight: 600;}
 .console-text { font-size: 0.85rem; margin-bottom: 0.5rem; opacity: 0.9;}
+.console-action-btn { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: auto; padding: 0.5rem 0.75rem; border: 1px solid var(--console-text-cyan); color: var(--console-text-cyan); background: rgba(0, 240, 255, 0.1); border-radius: 4px; font-family: 'Courier New', Courier, monospace; font-size: 0.75rem; font-weight: 700; text-decoration: none; transition: all 0.2s ease; align-self: flex-start; letter-spacing: 1px; }
+.console-action-btn:hover { background: var(--console-text-cyan); color: var(--console-bg); transform: translateX(4px); }
 
 /* Repo / Action Links aligned at the bottom of cards */
 .action-links {
