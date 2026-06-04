@@ -242,10 +242,8 @@
                     <div class="project-details">
                         <h3 class="project-name">Movie Revenue Dashboard</h3>
                         <ul class="impact-list">
-                            <li>Processed <strong>647K+</strong> records mapping <strong>$709B</strong> in theatrical
-                                revenue to statistically link macro genre trends to fiscal success.</li>
-                            <li>Constructed interactive Power BI telemetry, simulating live KPI business parameters for
-                                high-level content strategy.</li>
+                            <li>Cleaned and joined <strong>647K+</strong> records worth <strong>$709B</strong> in box office revenue using SQL to find which genres actually make money and which ones just get hype.</li>
+                            <li>Built an interactive Power BI dashboard with slicers, drill-throughs and live KPIs so the data tells the story without needing a slideshow.</li>
                         </ul>
                         <div class="tech-rack">
                             <span class="tech-pill">SQL</span>
@@ -291,10 +289,8 @@
                     <div class="project-details">
                         <h3 class="project-name">Music Genre CNN Classification</h3>
                         <ul class="impact-list">
-                            <li>Designed a Convolutional Neural Net digesting <strong>50K+</strong> audio samples,
-                                successfully reaching <strong>87.6%</strong> diagnostic accuracy.</li>
-                            <li>Containerized the inference model via Docker and published onto Hugging Face, completely
-                                eliminating pre-existing manual tagging blockers.</li>
+                            <li>Trained a CNN on <strong>50K+</strong> audio samples across 10 genres and hit <strong>87.6%</strong> accuracy by converting raw audio into mel-spectrograms and feeding them as image inputs.</li>
+                            <li>Packaged the model in Docker, deployed it on Hugging Face Spaces so anyone can test it in a browser without installing anything.</li>
                         </ul>
                         <div class="tech-rack">
                             <span class="tech-pill">Python</span>
@@ -335,8 +331,8 @@
                     <div class="project-details">
                         <h3 class="project-name">Intelligence Daily</h3>
                         <ul class="impact-list">
-                            <li>Engineered a fully automated AI news pipeline using GitHub Actions and Gemini API, curating <strong>12+</strong> RSS sources into a high-signal daily newsletter delivered at 7 AM IST — zero manual intervention.</li>
-                            <li>Optimized API payloads by <strong>85%</strong> by stripping redundant metadata and restricting inputs to titles only, permanently resolving free-tier token limit crashes.</li>
+                            <li>Set up a Python script on GitHub Actions that pulls from <strong>12+</strong> RSS feeds every morning, sends the articles to Gemini API for ranking, and emails the top stories at 7 AM IST. Runs daily with zero manual work.</li>
+                            <li>Cut the API payload by <strong>85%</strong> by only sending article titles instead of full summaries, which fixed the free-tier token crashes that kept failing the pipeline.</li>
                         </ul>
                         <div class="tech-rack">
                             <span class="tech-pill">Python</span>
@@ -377,8 +373,8 @@
                     <div class="project-details">
                         <h3 class="project-name">Instant Context — Chrome Extension</h3>
                         <ul class="impact-list">
-                            <li>Developed a Manifest V3 Chrome Extension that extracts <strong>10K+</strong> characters of live webpage content, combining it with Serper web-search results to deliver context-grounded AI answers via Gemini API streaming.</li>
-                            <li>Implemented domain-based session intelligence — chat persists within a domain and auto-resets on site change — plus a detachable pop-out window for multitasking.</li>
+                            <li>Built a Chrome Extension (Manifest V3) that reads <strong>10K+</strong> characters off the current webpage, combines it with Serper search results, and streams context-aware answers from Gemini right in the browser.</li>
+                            <li>Added session tracking per domain so the chat stays alive while you browse the same site but clears itself when you switch to a different one. Also supports a pop-out floating window.</li>
                         </ul>
                         <div class="tech-rack">
                             <span class="tech-pill">JavaScript</span>
@@ -419,8 +415,8 @@
                     <div class="project-details">
                         <h3 class="project-name">YouTube Summarizer — Android App</h3>
                         <ul class="impact-list">
-                            <li>Built a native Android app (Kotlin + Jetpack Compose) that extracts YouTube transcripts on-device and streams AI-powered summaries via Gemini <strong>3.5 Flash</strong> — text appears in under <strong>2 seconds</strong> with zero server costs.</li>
-                            <li>Added an interactive Chat-with-Video feature enabling transcript-grounded Q&A, with <strong>AES-256</strong> encrypted API key storage and offline history via Room DB.</li>
+                            <li>Built a Kotlin + Jetpack Compose Android app that pulls YouTube transcripts on-device and streams a summary through Gemini <strong>3.5 Flash</strong> in under <strong>2 seconds</strong>. No server, no subscription, completely free to run.</li>
+                            <li>Added a Chat tab where you can ask questions about the video and get answers grounded in the actual transcript. API keys are stored with <strong>AES-256</strong> encryption and past summaries are cached offline via Room DB.</li>
                         </ul>
                         <div class="tech-rack">
                             <span class="tech-pill">Kotlin</span>

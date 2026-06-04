@@ -227,21 +227,21 @@ body {
 }
 
 /* Projects & Console Simulator */
-.grid-layout { display: grid; grid-template-columns: repeat(auto-fill, minmax(460px, 1fr)); gap: 2.5rem; }
-.project-card { display: flex; flex-direction: column; padding: 0; }
-.project-details { padding: 2.5rem; flex-grow: 1; display: flex; flex-direction: column;}
+.grid-layout { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
+.project-card { display: flex; flex-direction: row; padding: 0; }
+.project-details { padding: 2.5rem; flex: 1; display: flex; flex-direction: column; min-width: 0; }
 .project-name { font-family: var(--space-font); font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; }
 
 /* The Bombastic Console with Light Theme Adapters */
 .project-console {
-    height: 240px; background: var(--console-bg); border-bottom: 1px solid var(--border-dim); border-radius: 20px 20px 0 0;
-    display: flex; flex-direction: column; position: relative; overflow:hidden;
+    width: 380px; min-width: 380px; min-height: 240px; background: var(--console-bg); border-right: 1px solid var(--border-dim); border-radius: 20px 0 0 20px;
+    display: flex; flex-direction: column; position: relative; overflow: hidden;
 }
 .console-media-wrapper {
     position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; z-index: 1;
 }
 .console-gif {
-    position: absolute; width:100%; height:100%; object-fit:cover; z-index:0; opacity: 1;
+    position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 1;
 }
 .overlay-element { position: relative; z-index: 2; }
 
@@ -311,6 +311,12 @@ body {
 @media (max-width: 900px) {
     .metrics-grid { grid-template-columns: 1fr 1fr; }
     .grid-layout, .skills-grid { grid-template-columns: 1fr; }
+    .project-card { flex-direction: column; }
+    .project-console {
+        width: 100%; min-width: unset; min-height: 200px;
+        border-right: none; border-bottom: 1px solid var(--border-dim);
+        border-radius: 20px 20px 0 0;
+    }
     .education-block { flex-direction: column; align-items: flex-start; gap: 2rem; }
     .edu-score { align-items: flex-start; text-align: left; }
     .action-links { flex-direction: column; }
