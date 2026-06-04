@@ -257,8 +257,8 @@ body {
 .text-cyan { color: var(--console-text-cyan); font-weight: 600;}
 .text-purple { color: var(--console-text-purple); font-weight: 600;}
 .console-text { font-size: 0.85rem; margin-bottom: 0.5rem; opacity: 0.9;}
-.console-action-btn { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: auto; padding: 0.5rem 0.75rem; border: 1px solid var(--console-text-cyan); color: var(--console-text-cyan); background: rgba(0, 240, 255, 0.1); border-radius: 4px; font-family: 'Courier New', Courier, monospace; font-size: 0.75rem; font-weight: 700; text-decoration: none; transition: all 0.2s ease; align-self: flex-start; letter-spacing: 1px; }
-.console-action-btn:hover { background: var(--console-text-cyan); color: var(--console-bg); transform: translateX(4px); }
+.console-action-btn { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.5rem; padding: 0.6rem 1.2rem; border: 1px solid rgba(255,255,255,0.4); color: #fff; background: rgba(255,255,255,0.1); border-radius: 6px; font-family: var(--body-font); font-size: 0.9rem; font-weight: 500; text-decoration: none; transition: all 0.2s ease; align-self: flex-start; }
+.console-action-btn:hover { background: rgba(255,255,255,0.25); border-color: #fff; transform: translateY(-2px); }
 
 /* Repo / Action Links aligned at the bottom of cards */
 .action-links {
